@@ -1,0 +1,60 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html >
+<head>
+<title>Drunk Brunch Calculator</title>
+
+</head>
+
+<body>
+ <h1> Drunk Brunch Calculator</h1>
+ 
+ <script type="text/javascript">
+ var weekly = 0;
+ 
+function WeeklyInc(inc) {
+weekly = weekly + inc;
+}
+function Calculate() {
+var jageNow = document.forms["Brunch"]["ageNow"].value;
+var jageMax = document.forms["Brunch"]["ageMax"].value;
+var per = document.forms["Brunch"]["drinkPerBrunch"].value;
+var drinks = (weekly * per);
+var supply = ((jageMax-jageNow) * (drinks*52));
+var answer = "You just might drink " + supply + " Bloody Marys before you die at " + jageMax + " at the rate you're going. ";
+
+if (drinks <= 3) 
+	{
+	alert(answer + "Your liver should be alright, brunch away. ");
+	}
+
+else if (drinks <= 7)
+	{
+		alert(answer + "Woah Nelly. That's a lot of horseradish. ");
+	}
+else 
+	{
+		alert(answer + "You lush. ");
+	}
+	
+}
+</script>
+	
+
+
+ <form name="Brunch" method="post">     
+
+   <p>How many years young are you? <br /><input type="number" name="ageNow" id="ageNow"></p>
+      <p>How many years old do you plan to get?<br /><input type="number" name="ageMax" id="ageMax"> </p>
+	  <p>How many times a week do you Brunch?<br />
+	   <input type="checkbox" name="brunchPerWeek" onclick="WeeklyInc(1)">Saturday<br>
+	   <input type="checkbox" name="brunchPerWeek" onclick="WeeklyInc(1)">Sunday<br>
+	   <input type="checkbox" name="brunchPerWeek" onclick="WeeklyInc(7)">Every Damn Day</p>
+	  <p>And just how many Bloody Marys might you consume at aforementioned brunch?<br /><input type="number" name="drinkPerBrunch" id="drinkPerBrunch"> </p> 
+    <input type="submit" value="Cheers" onclick="Calculate()">
+</form>
+
+<img src="http://thehoochlife.com/wp-content/uploads/2011/12/bloody_mary_2-266x399.jpg" alt="drink up, lush" />
+
+<!-- --><script type="text/javascript" src="http://static.websimages.com/static/global/js/webs/usersites/escort.js"></script><script type="text/javascript">if(typeof(urchinTracker)=='function'){_uacct="UA-230305-2";_udn="none";_uff=false;urchinTracker();}</script></body>
+</html>
